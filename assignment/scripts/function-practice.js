@@ -5,52 +5,72 @@ console.log('***** Function Practice *****')
 // to test it and display the result
 
 // 1. Function to return 'Hello World!'
+
 function hello() {
   return 'Hello World!';
 }
+
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
-  return;
+
+function helloName(name) {
+  return name;
 }
+
+myname = helloName ('Chameng');
+console.log ('Hello,', myname + "!");
+
 // Remember to call the function to test
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+
+function addNumbers( firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
 }
 
+let result = addNumbers (10,10);
+console.log("The result is:", result);
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
 
+function multiplyThree(num0, num1, num3) {
+  return num0 * num1 * num3;
 }
 
+result = multiplyThree (10,10,10)
+console.log("The result is:", result);
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
-  if ( number > 0 ){
-    return;
+
+function isPositive(number) {
+  if (number > 0 ){
+    return true;
   }
-    return;
+  else {
+    return false;
+  }
 }
-// Call the function to test each outcome (true & false) 
-// Write a separate console.log statement for each outcome
+
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
+// Call the function to test each outcome (true & false) 
+// Write a separate console.log statement for each outcome
+
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+function getLast( array ) {
+  getLast.pop (array);
+  return undefined;
 }
 
 // 7. Function to find a value in an array. Return true if the 
