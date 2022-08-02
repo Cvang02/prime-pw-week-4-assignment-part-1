@@ -69,10 +69,14 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 
 function getLast( array ) {
-  
+  if (array.length>0) {
+  return array[array.length-1];
+  }
+  else {
+    return undefined;
+  }
 }
-
-
+  
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
@@ -111,17 +115,43 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
+// TODO: loop to add items
 
-function sumAll( ) {
+function sumAll(array) {
   let sum = 0
-  // TODO: loop to add items
+  for (let i=0; i<array.length; i++) {
+  sum =+ array [i]
+  }
   return sum;
 }
+
+
+
+// function amountTotal(amount) {
+//   var total = 0;
+//   for (i = 0; i < amount.length; ++i) {
+//        total += amount[i]; // add each element in an array to total
+//   }
+//   return total;// return sum of elements in array
+// }
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+// function arr(inArray) {
+//   for (let i=0; i<inArray.length; i++) {
+//         if (array[i] === value) {
+//           return true;
+//         }
+//         else {
+//           return false;
+//         }
+//   }
+// }
+
+// console.log ('Test - Is Value in array', find(2,[2,4,6,8]) );
+// console.log ('Test - Is Value in array', find(1,[2,4,6,8]) );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
