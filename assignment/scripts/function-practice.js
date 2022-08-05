@@ -68,14 +68,19 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
+const array = [1,2,3];
+
 function getLast( array ) {
-  if (array.length>0) {
-  return array[array.length-1];
-  }
-  else {
+  if (array === null || array === [] ){
     return undefined;
   }
-}
+ else {
+    return lastItem; }
+  }
+  
+lastItem = array[array.length-1];
+
+console.log('last item in array:', getLast( ) );
   
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -94,7 +99,6 @@ function find( value, array ) {
 
 console.log ('Test - Is Value in array', find(2,[2,4,6,8]) );
 console.log ('Test - Is Value in array', find(1,[2,4,6,8]) );
-
 
 // ----------------------
 // Stretch Goals
@@ -117,46 +121,51 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 // 9. Function to return the sum of all numbers in an array
 // TODO: loop to add items
 
-function sumAll(array) {
-  let sum = 0
-  for (let i=0; i<array.length; i++) {
-  sum =+ array [i]
-  }
+let sum = 0;
+const num = [1,2,3];
+
+function sumAll(num) {
+  for (let i=0; i < num.length; i++) {
+    if(i === num.lastIndexOf(num[i])) {
+      sum += num[i];
+    }
+}
   return sum;
 }
-
-
-
-// function amountTotal(amount) {
-//   var total = 0;
-//   for (i = 0; i < amount.length; ++i) {
-//        total += amount[i]; // add each element in an array to total
-//   }
-//   return total;// return sum of elements in array
-// }
+console.log('Sum of all numbers:', sumAll(num));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-// function arr(inArray) {
-//   for (let i=0; i<inArray.length; i++) {
-//         if (array[i] === value) {
-//           return true;
-//         }
-//         else {
-//           return false;
-//         }
-//   }
-// }
+let allNumbers = [];
 
-// console.log ('Test - Is Value in array', find(2,[2,4,6,8]) );
-// console.log ('Test - Is Value in array', find(1,[2,4,6,8]) );
+function getPositives (allNumbers) {
+  const posArr = allNumbers.filter(addNumbers => addNumbers > 0);
+  return posArr
+}
+
+console.log ('Should show all positives:', getPositives ([-3,-2,-1,0,1,2,3]));
+console.log ('Should be empty array:', getPositives ([-3,-2,-1,0]));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+// Create a function that takes an integer as an argument and returns "Even" 
+// for even numbers or "Odd" for odd numbers.
 
-// need to finish # 6, 9, 10, 11
+function even_or_odd(number) {
+  if (number%2 == 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+console.log('2:', even_or_odd(2));
+console.log('7:', even_or_odd(7));
+console.log('3:', even_or_odd(3));
+console.log('0:', even_or_odd(0));
+
